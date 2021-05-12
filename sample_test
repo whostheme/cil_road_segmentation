@@ -1,0 +1,478 @@
+Sender: LSF System <lsfadmin@lo-s4-062>
+Subject: Job 16089292: <python main.py -c config/unet.json> in cluster <leonhard> Exited
+
+Job <python main.py -c config/unet.json> was submitted from host <lo-login-02> by user <borobin> in cluster <leonhard> at Fri May  7 00:21:18 2021
+Job was executed on host(s) <6*lo-s4-062>, in queue <gpu.4h>, as user <borobin> in cluster <leonhard> at Fri May  7 00:29:00 2021
+</cluster/home/borobin> was used as the home directory.
+</cluster/home/borobin/Baseline_U-Net> was used as the working directory.
+Started at Fri May  7 00:29:00 2021
+Terminated at Fri May  7 00:29:02 2021
+Results reported at Fri May  7 00:29:02 2021
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+python main.py -c config/unet.json
+------------------------------------------------------------
+
+Exited with exit code 1.
+
+Resource usage summary:
+
+    CPU time :                                   0.28 sec.
+    Max Memory :                                 6 MB
+    Average Memory :                             -
+    Total Requested Memory :                     6144.00 MB
+    Delta Memory :                               6138.00 MB
+    Max Swap :                                   -
+    Max Processes :                              -
+    Max Threads :                                -
+    Run time :                                   18 sec.
+    Turnaround time :                            464 sec.
+
+The output (if any) follows:
+
+Traceback (most recent call last):
+  File "main.py", line 1, in <module>
+    import pytorch_lightning as pl
+ModuleNotFoundError: No module named 'pytorch_lightning'
+Sender: LSF System <lsfadmin@lo-s4-063>
+Subject: Job 16089306: <python main.py -c config/unet.json> in cluster <leonhard> Done
+
+Job <python main.py -c config/unet.json> was submitted from host <lo-login-02> by user <borobin> in cluster <leonhard> at Fri May  7 00:45:04 2021
+Job was executed on host(s) <6*lo-s4-063>, in queue <gpu.4h>, as user <borobin> in cluster <leonhard> at Fri May  7 00:51:01 2021
+</cluster/home/borobin> was used as the home directory.
+</cluster/home/borobin/Baseline_U-Net> was used as the working directory.
+Started at Fri May  7 00:51:01 2021
+Terminated at Fri May  7 00:56:38 2021
+Results reported at Fri May  7 00:56:38 2021
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+python main.py -c config/unet.json
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time :                                   334.62 sec.
+    Max Memory :                                 4463 MB
+    Average Memory :                             3174.36 MB
+    Total Requested Memory :                     6144.00 MB
+    Delta Memory :                               1681.00 MB
+    Max Swap :                                   -
+    Max Processes :                              3
+    Max Threads :                                22
+    Run time :                                   362 sec.
+    Turnaround time :                            694 sec.
+
+The output (if any) follows:
+
+/cluster/home/borobin/Baseline_U-Net/utils.py:165: RuntimeWarning: More than 20 figures have been opened. Figures created through the pyplot interface (`matplotlib.pyplot.figure`) are retained until explicitly closed and may consume too much memory. (To control this warning, see the rcParam `figure.max_open_warning`).
+  fig, axs = plt.subplots(3, imgs_to_draw, figsize=(18.5, 12))
+runs/unet_1/07.05.2021-00:51:06
+Epoch 1/50:   0%|          | 0/23 [00:00<?, ?it/s]
+	- loss = 0.4504063388575678
+  	- val_loss = 0.6393004655838013
+  	- acc = 0.7954946393552034
+  	- val_acc = 0.6935617129007975
+  	- patch_acc = 0.6575898301342259
+  	- val_patch_acc = 0.2964409788449605
+ 
+Epoch 2/50:   0%|          | 0/23 [00:00<?, ?it/s]
+	- loss = 0.36525512907816016
+  	- val_loss = 0.8556305567423502
+  	- acc = 0.8263581524724546
+  	- val_acc = 0.3818285862604777
+  	- patch_acc = 0.7930253718210303
+  	- val_patch_acc = 0.30396411816279095
+ 
+Epoch 3/50:   0%|          | 0/23 [00:00<?, ?it/s]
+	- loss = 0.3309147992859716
+  	- val_loss = 0.3539207975069682
+  	- acc = 0.8476213139036427
+  	- val_acc = 0.83206574122111
+  	- patch_acc = 0.8120848536491394
+  	- val_patch_acc = 0.7459490696589152
+ 
+Epoch 4/50:   0%|          | 0/23 [00:00<?, ?it/s]
+	- loss = 0.3175720196703206
+  	- val_loss = 0.3012324472268422
+  	- acc = 0.8502184100773024
+  	- val_acc = 0.8653587102890015
+  	- patch_acc = 0.8223882887674414
+  	- val_patch_acc = 0.8399884303410848
+ 
+Epoch 5/50:   0%|          | 0/23 [00:00<?, ?it/s]
+	- loss = 0.2971964744122132
+  	- val_loss = 0.4166009724140167
+  	- acc = 0.8635853269825811
+  	- val_acc = 0.8311654726664225
+  	- patch_acc = 0.8340504299039426
+  	- val_patch_acc = 0.8025173544883728
+ 
+Epoch 6/50:   0%|          | 0/23 [00:00<?, ?it/s]
+	- loss = 0.27801626726337103
+  	- val_loss = 0.25012604892253876
+  	- acc = 0.8742540167725604
+  	- val_acc = 0.8941221038500468
+  	- patch_acc = 0.8499018705409506
+  	- val_patch_acc = 0.8634259303410848
+ 
+Epoch 7/50:   0%|          | 0/23 [00:00<?, ?it/s]
+	- loss = 0.2722214868535166
+  	- val_loss = 0.2920060356458028
+  	- acc = 0.8823848211246988
+  	- val_acc = 0.8996791243553162
+  	- patch_acc = 0.8518266911092012
+  	- val_patch_acc = 0.8781828880310059
+ 
+Epoch 8/50:   0%|          | 0/23 [00:00<?, ?it/s]
+	- loss = 0.26079142676747363
+  	- val_loss = 0.28643815716107685
+  	- acc = 0.8884129938871964
+  	- val_acc = 0.8852443099021912
+  	- patch_acc = 0.8665270287057628
+  	- val_patch_acc = 0.8739872773488363
+ 
+Epoch 9/50:   0%|          | 0/23 [00:00<?, ?it/s]
+	- loss = 0.23951098905957263
+  	- val_loss = 0.21013345817724863
+  	- acc = 0.8990772729334624
+  	- val_acc = 0.9169271985689799
+  	- patch_acc = 0.8806234909140546
+  	- val_patch_acc = 0.9036458532015482
+ 
+Epoch 10/50:   0%|          | 0/23 [00:00<?, ?it/s]
+	- loss = 0.23704480800939642
+  	- val_loss = 0.19559213519096375
+  	- acc = 0.9014513026113096
+  	- val_acc = 0.9312286376953125
+  	- patch_acc = 0.8834541051284127
+  	- val_patch_acc = 0.9237558046976725
+ 
+Epoch 11/50:   0%|          | 0/23 [00:00<?, ?it/s]
+	- loss = 0.22911045149616574
+  	- val_loss = 0.23210325837135315
+  	- acc = 0.9077586427978848
+  	- val_acc = 0.9091503222783407
+  	- patch_acc = 0.8898513083872588
+  	- val_patch_acc = 0.9061053395271301
+ 
+Epoch 12/50:   0%|          | 0/23 [00:00<?, ?it/s]
+	- loss = 0.21656221410502557
+  	- val_loss = 0.1891937553882599
+  	- acc = 0.9134621024131775
+  	- val_acc = 0.9348059892654419
+  	- patch_acc = 0.9013624787330627
+  	- val_patch_acc = 0.9253472288449606
+ 
+Epoch 13/50:   0%|          | 0/23 [00:00<?, ?it/s]
+	- loss = 0.20746252070302548
+  	- val_loss = 0.2453035314877828
+  	- acc = 0.9189441489136737
+  	- val_acc = 0.9021487832069397
+  	- patch_acc = 0.9078917632932249
+  	- val_patch_acc = 0.8962673544883728
+ 
+Epoch 14/50:   0%|          | 0/23 [00:00<?, ?it/s]
+	- loss = 0.2228999260974967
+  	- val_loss = 0.20365684231122336
+  	- acc = 0.9078590377517368
+  	- val_acc = 0.9278813004493713
+  	- patch_acc = 0.893304661564205
+  	- val_patch_acc = 0.905381957689921
+ 
+Epoch 15/50:   0%|          | 0/23 [00:00<?, ?it/s]
+	- loss = 0.19180154120144638
+  	- val_loss = 0.19971484442551932
+  	- acc = 0.9294451267822929
+  	- val_acc = 0.9243039886156718
+  	- patch_acc = 0.9153268466825071
+  	- val_patch_acc = 0.9205729166666666
+ 
+Epoch 16/50:   0%|          | 0/23 [00:00<?, ?it/s]
+	- loss = 0.19444346751855768
+  	- val_loss = 0.20919089516003928
+  	- acc = 0.9268346273380778
+  	- val_acc = 0.923139234383901
+  	- patch_acc = 0.918459397295247
+  	- val_patch_acc = 0.9227430621782938
+ 
+Epoch 17/50:   0%|          | 0/23 [00:00<?, ?it/s]
+	- loss = 0.18677836462207462
+  	- val_loss = 0.21271033585071564
+  	- acc = 0.9309737397276837
+  	- val_acc = 0.9138194918632507
+  	- patch_acc = 0.924667881882709
+  	- val_patch_acc = 0.8951099713643392
+ 
+Epoch 18/50:   0%|          | 0/23 [00:00<?, ?it/s]
+	- loss = 0.18289584115795468
+  	- val_loss = 0.31822894016901654
+  	- acc = 0.9318266148152559
+  	- val_acc = 0.8871742486953735
+  	- patch_acc = 0.92357337474823
+  	- val_patch_acc = 0.8764467636744181
+ 
+Epoch 19/50:   0%|          | 0/23 [00:00<?, ?it/s]
+	- loss = 0.1747518580244935
+  	- val_loss = 0.20342546701431274
+  	- acc = 0.9372639008190321
+  	- val_acc = 0.9287974039713541
+  	- patch_acc = 0.9316878085551055
+  	- val_patch_acc = 0.9266493121782938
+ 
+Epoch 20/50:   0%|          | 0/23 [00:00<?, ?it/s]
+	- loss = 0.16546777052723843
+  	- val_loss = 0.1715285231669744
+  	- acc = 0.9426902092021444
+  	- val_acc = 0.9430813193321228
+  	- patch_acc = 0.9360847032588461
+  	- val_patch_acc = 0.9401041666666666
+ 
+Epoch 21/50:   0%|          | 0/23 [00:00<?, ?it/s]
+	- loss = 0.1646349812331407
+  	- val_loss = 0.2294112890958786
+  	- acc = 0.9420266281003538
+  	- val_acc = 0.9131113886833191
+  	- patch_acc = 0.9382925785106161
+  	- val_patch_acc = 0.9126157561937968
+ 
+Epoch 22/50:   0%|          | 0/23 [00:00<?, ?it/s]
+	- loss = 0.15684021134739337
+  	- val_loss = 0.18814935286839804
+  	- acc = 0.9471199667972067
+  	- val_acc = 0.9360673824946085
+  	- patch_acc = 0.9452558937280074
+  	- val_patch_acc = 0.9427083333333334
+ 
+Epoch 23/50:   0%|          | 0/23 [00:00<?, ?it/s]
+	- loss = 0.15808734589296838
+  	- val_loss = 0.28099076946576435
+  	- acc = 0.9463063193404156
+  	- val_acc = 0.9059894680976868
+  	- patch_acc = 0.9425384998321533
+  	- val_patch_acc = 0.9052372773488363
+ 
+Epoch 24/50:   0%|          | 0/23 [00:00<?, ?it/s]
+	- loss = 0.14089448490868445
+  	- val_loss = 0.17826678852240244
+  	- acc = 0.9558547812959423
+  	- val_acc = 0.9423805673917135
+  	- patch_acc = 0.9538420957067738
+  	- val_patch_acc = 0.9367766380310059
+ 
+Epoch 25/50:   0%|          | 0/23 [00:00<?, ?it/s]
+	- loss = 0.1397063728907834
+  	- val_loss = 0.1690768301486969
+  	- acc = 0.9554564330888831
+  	- val_acc = 0.9471237858136495
+  	- patch_acc = 0.955880141776541
+  	- val_patch_acc = 0.9429976940155029
+ 
+Epoch 26/50:   0%|          | 0/23 [00:00<?, ?it/s]
+	- loss = 0.13967019027989844
+  	- val_loss = 0.20204623540242514
+  	- acc = 0.9552526914555094
+  	- val_acc = 0.9366228977839152
+  	- patch_acc = 0.9537288727967635
+  	- val_patch_acc = 0.9353298544883728
+ 
+Epoch 27/50:   0%|          | 0/23 [00:00<?, ?it/s]
+	- loss = 0.1488894350502802
+  	- val_loss = 0.170894222954909
+  	- acc = 0.951280977415002
+  	- val_acc = 0.942465345064799
+  	- patch_acc = 0.9508793872335682
+  	- val_patch_acc = 0.9479166666666666
+ 
+Epoch 28/50:   0%|          | 0/23 [00:00<?, ?it/s]
+	- loss = 0.13496108644682428
+  	- val_loss = 0.16735152900218964
+  	- acc = 0.9588188943655594
+  	- val_acc = 0.9463252226511637
+  	- patch_acc = 0.9598996146865513
+  	- val_patch_acc = 0.9395254850387573
+ 
+Epoch 29/50:   0%|          | 0/23 [00:00<?, ?it/s]
+	- loss = 0.12912517008574112
+  	- val_loss = 0.16111321995655695
+  	- acc = 0.9608488367951434
+  	- val_acc = 0.9474843343098959
+  	- patch_acc = 0.9624849091405454
+  	- val_patch_acc = 0.9396701455116272
+ 
+Epoch 30/50:   0%|          | 0/23 [00:00<?, ?it/s]
+	- loss = 0.1273633105599362
+  	- val_loss = 0.16874472300211588
+  	- acc = 0.9619145160136016
+  	- val_acc = 0.9491323033968607
+  	- patch_acc = 0.9639756990515668
+  	- val_patch_acc = 0.942129651705424
+ 
+Epoch 31/50:   0%|          | 0/23 [00:00<?, ?it/s]
+	- loss = 0.14895389326240704
+  	- val_loss = 0.1585568686326345
+  	- acc = 0.9488592536553092
+  	- val_acc = 0.9482975800832113
+  	- patch_acc = 0.9490866557411526
+  	- val_patch_acc = 0.9448784788449606
+ 
+Epoch 32/50:   0%|          | 0/23 [00:00<?, ?it/s]
+	- loss = 0.14042169730300488
+  	- val_loss = 0.19707402090231577
+  	- acc = 0.9562687640604766
+  	- val_acc = 0.9373654921849569
+  	- patch_acc = 0.9557291658028312
+  	- val_patch_acc = 0.9367766181627909
+ 
+Epoch 33/50:   0%|          | 0/23 [00:00<?, ?it/s]
+	- loss = 0.13135806827441507
+  	- val_loss = 0.15994847814242044
+  	- acc = 0.9606879094372625
+  	- val_acc = 0.9498669703801473
+  	- patch_acc = 0.9589183304620825
+  	- val_patch_acc = 0.9467592636744181
+ 
+Epoch 34/50:   0%|          | 0/23 [00:00<?, ?it/s]
+	- loss = 0.11897296069756798
+  	- val_loss = 0.14815390606721243
+  	- acc = 0.96550961162733
+  	- val_acc = 0.9557563066482544
+  	- patch_acc = 0.9684291974357937
+  	- val_patch_acc = 0.9502314925193787
+ 
+Epoch 35/50:   0%|          | 0/23 [00:00<?, ?it/s]
+	- loss = 0.11763496211041576
+  	- val_loss = 0.16316743195056915
+  	- acc = 0.9670274620470793
+  	- val_acc = 0.9482269287109375
+  	- patch_acc = 0.9685801760010098
+  	- val_patch_acc = 0.9444444378217062
+ 
+Epoch 36/50:   0%|          | 0/23 [00:00<?, ?it/s]
+	- loss = 0.13135149070750113
+  	- val_loss = 0.14216744899749756
+  	- acc = 0.9600474134735439
+  	- val_acc = 0.9578320582707723
+  	- patch_acc = 0.9621452326359956
+  	- val_patch_acc = 0.9548611243565878
+ 
+Epoch 37/50:   0%|          | 0/23 [00:00<?, ?it/s]
+	- loss = 0.12213708751875421
+  	- val_loss = 0.1615720639626185
+  	- acc = 0.9657897275427113
+  	- val_acc = 0.9470062255859375
+  	- patch_acc = 0.9660137451213339
+  	- val_patch_acc = 0.9487847288449606
+ 
+Epoch 38/50:   0%|          | 0/23 [00:00<?, ?it/s]
+	- loss = 0.11542023718357086
+  	- val_loss = 0.17569260795911154
+  	- acc = 0.9678593899892725
+  	- val_acc = 0.9436351656913757
+  	- patch_acc = 0.9702219237451968
+  	- val_patch_acc = 0.9370659987131754
+ 
+Epoch 39/50:   0%|          | 0/23 [00:00<?, ?it/s]
+	- loss = 0.1111309039204017
+  	- val_loss = 0.16686930507421494
+  	- acc = 0.969589026077934
+  	- val_acc = 0.9518489241600037
+  	- patch_acc = 0.9716561099757319
+  	- val_patch_acc = 0.9440104166666666
+ 
+Epoch 40/50:   0%|          | 0/23 [00:00<?, ?it/s]
+	- loss = 0.10850144080493761
+  	- val_loss = 0.16825147966543832
+  	- acc = 0.9705997187158336
+  	- val_acc = 0.9498862028121948
+  	- patch_acc = 0.9729204437007075
+  	- val_patch_acc = 0.944444457689921
+ 
+Epoch 41/50:   0%|          | 0/23 [00:00<?, ?it/s]
+	- loss = 0.10858603826035625
+  	- val_loss = 0.161363755663236
+  	- acc = 0.9700726529826289
+  	- val_acc = 0.9547486702601115
+  	- patch_acc = 0.9734488259191099
+  	- val_patch_acc = 0.9526909788449606
+ 
+Epoch 42/50:   0%|          | 0/23 [00:00<?, ?it/s]
+	- loss = 0.11362171399852504
+  	- val_loss = 0.2174867788950602
+  	- acc = 0.9693810732468314
+  	- val_acc = 0.9265215992927551
+  	- patch_acc = 0.9709201455116272
+  	- val_patch_acc = 0.9244791666666666
+ 
+Epoch 43/50:   0%|          | 0/23 [00:00<?, ?it/s]
+	- loss = 0.10999675613382588
+  	- val_loss = 0.28106648723284405
+  	- acc = 0.9700644690057506
+  	- val_acc = 0.9200829466183981
+  	- patch_acc = 0.9731091545975726
+  	- val_patch_acc = 0.9084201455116272
+ 
+Epoch 44/50:   0%|          | 0/23 [00:00<?, ?it/s]
+	- loss = 0.12216433655956517
+  	- val_loss = 0.19123278061548868
+  	- acc = 0.967796291994012
+  	- val_acc = 0.9463026324907938
+  	- patch_acc = 0.9673347032588461
+  	- val_patch_acc = 0.9460358818372091
+ 
+Epoch 45/50:   0%|          | 0/23 [00:00<?, ?it/s]
+	- loss = 0.15701026145530783
+  	- val_loss = 0.8584535519282023
+  	- acc = 0.9475815710814103
+  	- val_acc = 0.8227680524190267
+  	- patch_acc = 0.9442934860353884
+  	- val_patch_acc = 0.7744502226511637
+ 
+Epoch 46/50:   0%|          | 0/23 [00:00<?, ?it/s]
+	- loss = 0.1359224782689758
+  	- val_loss = 0.16386595368385315
+  	- acc = 0.9571036489113517
+  	- val_acc = 0.9479048252105713
+  	- patch_acc = 0.9556914308796758
+  	- val_patch_acc = 0.9376446803410848
+ 
+Epoch 47/50:   0%|          | 0/23 [00:00<?, ?it/s]
+	- loss = 0.14412106508794037
+  	- val_loss = 0.20758207639058432
+  	- acc = 0.954333105812902
+  	- val_acc = 0.9328313867251078
+  	- patch_acc = 0.9525777542072794
+  	- val_patch_acc = 0.9266493121782938
+ 
+Epoch 48/50:   0%|          | 0/23 [00:00<?, ?it/s]
+	- loss = 0.12625107201545135
+  	- val_loss = 0.17881638805071512
+  	- acc = 0.9629658927088198
+  	- val_acc = 0.9472012122472128
+  	- patch_acc = 0.9627113601435786
+  	- val_patch_acc = 0.9479166666666666
+ 
+Epoch 49/50:   0%|          | 0/23 [00:00<?, ?it/s]
+	- loss = 0.11451149213573207
+  	- val_loss = 0.1625263293584188
+  	- acc = 0.9693306503088578
+  	- val_acc = 0.9515821933746338
+  	- patch_acc = 0.9688254905783612
+  	- val_patch_acc = 0.9479166666666666
+ 
+Epoch 50/50:   0%|          | 0/23 [00:00<?, ?it/s]
+	- loss = 0.0990702043408933
+  	- val_loss = 0.1552882840236028
+  	- acc = 0.9759335725203805
+  	- val_acc = 0.9580473701159159
+  	- patch_acc = 0.9788458761961564
+  	- val_patch_acc = 0.955439825852712
+ 
+Finished Training
