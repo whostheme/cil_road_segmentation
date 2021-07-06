@@ -4,7 +4,7 @@ venv
 
 # runs
 runs
-tenorboard
+tensorboard
 
 # Editor 
 .vscode
