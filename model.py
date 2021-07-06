@@ -9,7 +9,8 @@ class Block(nn.Module):
                                    nn.ReLU(),
                                    nn.BatchNorm2d(out_ch),
                                    nn.Conv2d(in_channels=out_ch, out_channels=out_ch, kernel_size=3, padding=1),
-                                   nn.ReLU())
+                                   nn.ReLU(), 
+                                   nn.Dropout(p=.15))
 
     def forward(self, x):
         return self.block(x)
