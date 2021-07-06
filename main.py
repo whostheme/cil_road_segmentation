@@ -5,6 +5,7 @@ from torch import nn
 from glob import glob
 import numpy as np
 import cv2
+import matplotlib.pyplot as plt
 
 from torch.utils.data import DataLoader, random_split
 
@@ -25,12 +26,15 @@ from get_data import(
     ImageDataset
 )
 
-from loss import(
-    get_loss
-)
+
 
 from model import UNet
 from train import train
+
+def concat_vh(list_2d):
+    # return final image
+    return cv2.vconcat([cv2.hconcat(list_h)
+                        for list_h in list_2d])
 
 
 def main():
@@ -90,9 +94,34 @@ def main():
     test_images = load_all_from_path(config['test_images'])
     size = test_images.shape[1:3]
     # we also need to resize the test images. This might not be the best ideas depending on their spatial resolution.
-    test_images = np.stack([cv2.resize(img, dsize=(384, 384)) for img in test_images], 0) # resize to 384
+    test_images = np.stack([cv2.resize(img, dsize=(608, 608)) for img in test_images], 0) # resize to 384
     test_images = np_to_tensor(np.moveaxis(test_images, -1, 1), device)
-    test_pred = [model(t).detach().cpu().numpy() for t in test_images.unsqueeze(1)]
+    #test_pred = [model(t).detach().cpu().numpy() for t in test_images.unsqueeze(1)]
+    test_pred = []
+    for i, t in enumerate(test_images.unsqueeze(1)):
+        print(i)
+
+        top_left = t[:, :, :384, :384]
+        top_right = t[:, :, :384, 224:608]
+        bottom_left = t[:, :, 224:608, :384]
+        bottom_right = t[:, :, 224:608, 224:608]
+        top_left = model(top_left).detach().cpu().numpy().squeeze()
+        top_right = model(top_right).detach().cpu().numpy().squeeze()
+        bottom_left = model(bottom_left).detach().cpu().numpy().squeeze()
+        bottom_right = model(bottom_right).detach().cpu().numpy().squeeze()
+
+        img_tile = concat_vh([[top_left, top_right[:, 176:]],
+                                [bottom_left[176:, :], bottom_right[176:, 176:]]
+                                ])
+
+        img_tile = np.expand_dims(np.expand_dims(img_tile, 0), 0)
+        test_pred.append(img_tile)
+
+        fig, (ax1, ax2) = plt.subplots(1, 2)
+        ax1.imshow(test_images[i][0].cpu(), cmap='gray')
+        ax2.imshow(test_pred[i].squeeze(), cmap='gnuplot')
+        plt.show()
+
     test_pred = np.concatenate(test_pred, 0)
     test_pred = np.moveaxis(test_pred, 1, -1)  # CHW to HWC
     test_pred = np.stack([cv2.resize(img, dsize=size) for img in test_pred], 0)  # resize to original shape

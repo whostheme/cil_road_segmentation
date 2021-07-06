@@ -1,7 +1,7 @@
 {
     "rand_seed": 42,
     "safe_model_path": "runs",
-    "epochs": 50,
+    "epochs": 40,
     "img_size": 400,
     "img_size_test": 608,
     "n_channels": 3,

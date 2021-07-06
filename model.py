@@ -17,7 +17,7 @@ class Block(nn.Module):
         
 class UNet(nn.Module):
     # UNet-like architecture for single class semantic segmentation.
-    def __init__(self, chs=(3,64,128,256,512,1024)):
+    def __init__(self, chs=(3,64,128,256,512,1024,2048)):
         super().__init__()
         enc_chs = chs  # number of channels in the encoder
         dec_chs = chs[::-1][:-1]  # number of channels in the decoder

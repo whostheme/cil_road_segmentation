@@ -1,0 +1,17 @@
+venv
+**/__pycache__
+
+
+# runs
+runs
+tenorboard
+
+# Editor 
+.vscode
+
+# Temp files
+temp.py
+
+
+output
+unet_submission.csv
