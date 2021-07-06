@@ -59,7 +59,7 @@ def main():
 
 
     # Reshape the image to simplify the handling of skip connections and maxpooling    
-    train_dataset = ImageDataset(config['train'], device, use_patches=False, resize_to=(384, 384), test_run=test_run)  # resize to 384
+    train_dataset = ImageDataset(config['train'], device, use_patches=False, resize_to=(400, 400), test_run=test_run)  # resize to 384
 
     # Split dataset in train/validation set
     
@@ -101,17 +101,17 @@ def main():
     for i, t in enumerate(test_images.unsqueeze(1)):
         print(i)
 
-        top_left = t[:, :, :384, :384]
-        top_right = t[:, :, :384, 224:608]
-        bottom_left = t[:, :, 224:608, :384]
-        bottom_right = t[:, :, 224:608, 224:608]
+        top_left = t[:, :, :400, :400]
+        top_right = t[:, :, :400, 208:608]
+        bottom_left = t[:, :, 208:608, :400]
+        bottom_right = t[:, :, 208:608, 208:608]
         top_left = model(top_left).detach().cpu().numpy().squeeze()
         top_right = model(top_right).detach().cpu().numpy().squeeze()
         bottom_left = model(bottom_left).detach().cpu().numpy().squeeze()
         bottom_right = model(bottom_right).detach().cpu().numpy().squeeze()
 
-        img_tile = concat_vh([[top_left, top_right[:, 176:]],
-                                [bottom_left[176:, :], bottom_right[176:, 176:]]
+        img_tile = concat_vh([[top_left, top_right[:, 192:]],
+                                [bottom_left[192:, :], bottom_right[192:, 192:]]
                                 ])
 
         img_tile = np.expand_dims(np.expand_dims(img_tile, 0), 0)
